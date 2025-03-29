@@ -177,6 +177,7 @@ Se realizaron pruebas de rendimiento con Lighthouse, logrando excelentes métric
 5. **Configurar Cloudflare**:
    - Agregar dominio a Cloudflare
    - Crear registro CNAME apuntando al endpoint de S3
+   ![Rendimiento Cloudflare](docs/images/Cloudflare_DNS.png)
    - Configurar SSL/TLS en modo Full
 
 ## 🔍 Validación y Testing
@@ -187,7 +188,7 @@ Se realizaron pruebas de rendimiento con Lighthouse, logrando excelentes métric
 - **Compresión**: Validación de respuestas con compresión gzip
 - **Caché**: Confirmación de funcionamiento correcto de políticas de caché
 - **Rendimiento**: Tests con Lighthouse y Cloudflare Observatory
-  ![Rendimiento Cloudflare](docs/images/Cloudflare_DNS.png)
+  
 - **Responsive**: Pruebas en múltiples dispositivos y resoluciones
 
 ## 🔮 Mejoras Futuras
