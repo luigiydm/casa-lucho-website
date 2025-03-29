@@ -140,7 +140,7 @@ Se realizaron pruebas de rendimiento con Lighthouse, logrando excelentes métric
 | Best Practices | 96/100 |
 | SEO | 100/100 |
 
-![Lighthouse Performance](docs/images/Captura%20desde%202025-03-29%2015-20-28.png)
+
 
 ## 🛠️ Guía de Implementación
 
