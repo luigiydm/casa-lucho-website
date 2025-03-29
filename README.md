@@ -15,6 +15,13 @@ Este proyecto implementa un sitio web estático para Casa Lucho, un negocio fami
 
 El proyecto tiene un significado personal: crear una presencia online profesional para el negocio de pintura de mi padre, aplicando mis conocimientos en cloud y desarrollo web para devolverle un poco de lo que me ayudó durante mis estudios.
 
+
+
+## 🌐 Demo del sitio  
+
+[![Ver video](https://img.youtube.com/vi/6IraeOZHjZs/maxresdefault.jpg)](https://youtu.be/6IraeOZHjZs)
+
+
 ## 🏗️ Arquitectura e Infraestructura
 
 La arquitectura implementada busca maximizar rendimiento, seguridad y minimizar costos:
