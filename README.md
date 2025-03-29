@@ -19,7 +19,7 @@ El proyecto tiene un significado personal: crear una presencia online profesiona
 
 ## 🌐 Demo del sitio
 
-[![Ver video](https://img.youtube.com/vi/6IraeOZHjZs/maxresdefault.jpg)](https://youtu.be/6IraeOZHjZs)
+[![Ver video](https://img.youtube.com/vi/6IraeOZHjZs/maxresdefault.jpg)](https://www.youtube.com/watch?v=6IraeOZHjZs)
 
 
 ## 🏗️ Arquitectura e Infraestructura
