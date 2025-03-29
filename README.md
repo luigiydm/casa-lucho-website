@@ -17,7 +17,7 @@ El proyecto tiene un significado personal: crear una presencia online profesiona
 
 
 
-## 🌐 Demo del sitio  
+## 🌐 Demo del sitio
 
 [![Ver video](https://img.youtube.com/vi/6IraeOZHjZs/maxresdefault.jpg)](https://youtu.be/6IraeOZHjZs)
 
