@@ -118,14 +118,13 @@ El sitio web fue diseñado priorizando:
 
 ## 💰 Análisis de Costos
 
-La implementación logra un costo operativo extremadamente bajo:
+La implementación logra un costo operativo extremadamente bajo si bien estoy usando el aws free tier paso unos costos estimados:
 
 | Servicio | Uso Mensual Estimado | Costo (USD) |
 |----------|----------------------|-------------|
 | S3 Storage | 10 MB | ~$0.0002 |
 | S3 Requests | 5,000 | ~$0.02 |
 | S3 Data Transfer | 500 MB | ~$0.04 |
-| Route 53 Hosted Zone | 1 | ~$0.50 |
 | Cloudflare (Free Tier) | - | $0.00 |
 | **TOTAL** | | **~$0.56/mes** |
 
