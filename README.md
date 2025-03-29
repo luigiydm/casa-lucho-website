@@ -186,7 +186,8 @@ Se realizaron pruebas de rendimiento con Lighthouse, logrando excelentes métric
   ![Acceso Denegado](docs/images/Acceso_403_Bucket.png)
 - **Compresión**: Validación de respuestas con compresión gzip
 - **Caché**: Confirmación de funcionamiento correcto de políticas de caché
-- **Rendimiento**: Tests con Lighthouse y Cloudflare Observatory
+- **Rendimiento**: Tests con Lighthouse 
+ ![Prueba Lighthouse](docs/images/Lighthouse_test.png)  
   
 - **Responsive**: Pruebas en múltiples dispositivos y resoluciones
 
