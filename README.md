@@ -1,4 +1,4 @@
-# Casa Lucho - Sitio Web Premium con Arquitectura Serverless
+# Casa Lucho - Sitio Web con Arquitectura Serverless
 
 Un sitio web profesional para Casa Lucho, negocio de pinturas y decoración con más de 30 años de experiencia, implementado con una arquitectura serverless de alto rendimiento y bajo costo utilizando AWS S3 y Cloudflare.
 
