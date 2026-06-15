@@ -882,6 +882,32 @@ section,
 }
 
 /*--------------------------------------------------------------
+# WhatsApp Floating Button
+--------------------------------------------------------------*/
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  z-index: 99999;
+  width: 55px;
+  height: 55px;
+  background: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float i {
+  font-size: 30px;
+  color: #fff;
+}
+
+.whatsapp-float:hover {
+  background: #1ebe5d;
+  transform: scale(1.08);
+}
+
+/*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
 .scroll-top {
