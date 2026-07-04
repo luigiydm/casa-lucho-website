@@ -29,8 +29,6 @@
 
   function mobileNavToogle() {
     document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
   }
   mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
 
@@ -153,48 +151,6 @@
 
 
 
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM cargado, buscando elementos de video...");
-    
-    // Referencias a los elementos
-    const videoModal = document.getElementById('videoModal');
-    const workVideo = document.getElementById('workVideo');
-    
-    if (videoModal && workVideo) {
-      console.log("Elementos encontrados, configurando eventos...");
-      
-      // Reproducir automáticamente cuando se abre el modal
-      videoModal.addEventListener('shown.bs.modal', function () {
-        console.log("Modal mostrado, intentando reproducir video...");
-        try {
-          var playPromise = workVideo.play();
-          
-          if (playPromise !== undefined) {
-            playPromise.then(_ => {
-              console.log("Reproducción iniciada correctamente");
-            })
-            .catch(error => {
-              console.error("Error al reproducir video:", error);
-            });
-          }
-        } catch (e) {
-          console.error("Error en reproducción automática:", e);
-        }
-      });
-      
-      // Pausar el video cuando se cierra el modal
-      videoModal.addEventListener('hidden.bs.modal', function () {
-        console.log("Modal cerrado, pausando video...");
-        workVideo.pause();
-        workVideo.currentTime = 0; // Reiniciar el video al principio
-      });
-    } else {
-      console.warn("No se encontraron los elementos necesarios:");
-      console.warn("videoModal encontrado:", !!videoModal);
-      console.warn("workVideo encontrado:", !!workVideo);
-    }
-  });
-
   // Función para enviar mensajes por WhatsApp desde el formulario
 function sendWhatsApp() {
   const name = document.getElementById('whatsapp-name').value.trim();
@@ -244,5 +200,32 @@ function sendWhatsApp() {
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  /**
+   * GTM - Tracking de clicks en WhatsApp y teléfono
+   */
+  document.querySelectorAll('a[href*="api.whatsapp.com"], .btn-send-whatsapp, .whatsapp-float').forEach(function(el) {
+    el.addEventListener('click', function () {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'click_whatsapp',
+        event_category: 'contacto',
+        event_label: el.closest('#contact') ? 'seccion_contacto' :
+                     el.classList.contains('whatsapp-float') ? 'boton_flotante' :
+                     el.classList.contains('btn-get-started') ? 'hero_cta' : 'footer'
+      });
+    });
+  });
+
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+    el.addEventListener('click', function () {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'click_telefono',
+        event_category: 'contacto',
+        event_label: 'llamada'
+      });
+    });
+  });
 
 })();

@@ -253,11 +253,63 @@ h1, h2, h3, h4, h5, h6 {
 /* Navegación Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: var(--nav-color);
-    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    background: none;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
     cursor: pointer;
-    line-height: 0;
-    transition: color 0.3s;
+    gap: 5px;
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+
+  .mobile-nav-toggle:hover {
+    background: var(--accent-color);
+  }
+
+  .mobile-nav-toggle:hover .hamburger-bar {
+    background-color: #fff;
+  }
+
+  .hamburger-bar {
+    display: block;
+    width: 22px;
+    height: 2.5px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile-nav-active .mobile-nav-toggle .hamburger-bar {
+    background-color: #fff;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle .hamburger-bar:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+  }
+
+  .mobile-nav-active .mobile-nav-toggle .hamburger-bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .mobile-nav-active .mobile-nav-toggle .hamburger-bar:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
   }
 
   .navmenu {
@@ -268,51 +320,56 @@ h1, h2, h3, h4, h5, h6 {
   .navmenu ul {
     display: none;
     position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
+    inset: 0 0 0 25%;
+    padding: 100px 0 40px;
     margin: 0;
-    border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
+    border-radius: 0;
+    background-color: #1f1f24;
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
+    list-style: none;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .navmenu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .navmenu a,
   .navmenu a:focus {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 16px 30px;
     font-family: var(--nav-font);
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--nav-color);
+    font-size: 17px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
     white-space: nowrap;
-    transition: 0.3s;
+    transition: all 0.3s;
+    letter-spacing: 0.5px;
   }
 
-  .navmenu a:hover,
+  .navmenu a:hover {
+    color: #fff;
+    background-color: rgba(255, 107, 107, 0.15);
+    padding-left: 36px;
+  }
+
   .navmenu .active {
-    color: var(--nav-hover-color);
+    color: var(--accent-color);
+    border-left: 3px solid var(--accent-color);
   }
 
   .mobile-nav-active {
     overflow: hidden;
   }
 
-  .mobile-nav-active .mobile-nav-toggle {
-    position: fixed;
-    right: 15px;
-    top: 15px;
-    z-index: 9999;
-    color: #fff;
-  }
-
   .mobile-nav-active .navmenu {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(33, 37, 41, 0.8);
+    background: rgba(0, 0, 0, 0.6);
     transition: 0.3s;
   }
 
@@ -882,6 +939,61 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Botón Flotante WhatsApp
+--------------------------------------------------------------*/
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99998;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50px;
+  padding: 14px 20px;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #22b35a;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  color: #fff;
+}
+
+.whatsapp-float i {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.whatsapp-float-label {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 575px) {
+  .whatsapp-float {
+    padding: 12px;
+    border-radius: 50%;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .whatsapp-float-label {
+    display: none;
+  }
+
+  .whatsapp-float i {
+    font-size: 22px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
 .scroll-top {
@@ -913,7 +1025,7 @@ section,
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-  bottom: 15px;
+  bottom: 80px;
 }
 
 /*--------------------------------------------------------------
@@ -1005,21 +1117,21 @@ section,
   .hero h1 {
     font-size: 28px;
   }
-  
+
   .hero p {
     font-size: 16px;
   }
-  
+
   .contact .info-item {
     padding: 20px;
   }
-  
+
   .video-overlay-caption,
   .video-thumbnail-caption {
     padding: 8px;
     font-size: 12px;
   }
-
+}
 
 /* Estilos para el formulario de WhatsApp */
 .whatsapp-form .form-container {
@@ -1088,6 +1200,4 @@ section,
     width: 100%;
     justify-content: center;
   }
-}
-
 }

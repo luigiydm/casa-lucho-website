@@ -18,8 +18,17 @@
   <meta property="og:image" content="assets/img/og-image.jpg">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NV3NRXHN');</script>
+  <!-- End Google Tag Manager -->
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -34,7 +43,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/main.css?v=2" rel="stylesheet">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -50,13 +59,18 @@
       "telephone": "+5491160328108",
       "openingHours": "Mo-Sa 08:00-18:00",
       "sameAs": [
-        "https://instagram.com/casalucho"
+        "https://www.instagram.com/casaluchopintura"
       ]
     }
   </script>
 </head>
 
 <body class="index-page">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NV3NRXHN"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <!-- Header -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
@@ -74,7 +88,11 @@
           <li><a href="#brands">Marcas</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <button class="mobile-nav-toggle d-xl-none" aria-label="Abrir menú">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
       </nav>
 
       <a class="btn-getstarted" href="#contact">
@@ -153,8 +171,8 @@
       </div>
     </div>
   </div>
-  
- 
+</section>
+
     <!-- Services Section -->
     <section id="services" class="services section light-background">
       <div class="container section-title" data-aos="fade-up">
@@ -278,13 +296,37 @@
       
       <div class="col-md-4 col-sm-6 gallery-item" data-aos="fade-up" data-aos-delay="500">
         <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/Trabajo-10.jpeg">
-          <img src="assets/img/gallery/Trabajo-9.jpeg" class="img-fluid rounded" alt="Proyecto de pintura completo">
+          <img src="assets/img/gallery/Trabajo-10.jpeg" class="img-fluid rounded" alt="Proyecto de pintura completo">
         </a>
       </div>
       
       <div class="col-md-4 col-sm-6 gallery-item" data-aos="fade-up" data-aos-delay="600">
         <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/Trabajo-9.jpeg">
-          <img src="assets/img/gallery/Trabajo-10.jpeg" class="img-fluid rounded" alt="Proyecto de pintura terminado">
+          <img src="assets/img/gallery/Trabajo-9.jpeg" class="img-fluid rounded" alt="Proyecto de pintura terminado">
+        </a>
+      </div>
+
+      <div class="col-md-4 col-sm-6 gallery-item" data-aos="fade-up" data-aos-delay="100">
+        <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/Trabajo-11.jpeg">
+          <img src="assets/img/gallery/Trabajo-11.jpeg" class="img-fluid rounded" alt="Trabajo de pintura residencial">
+        </a>
+      </div>
+
+      <div class="col-md-4 col-sm-6 gallery-item" data-aos="fade-up" data-aos-delay="200">
+        <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/Trabajo-12.jpeg">
+          <img src="assets/img/gallery/Trabajo-12.jpeg" class="img-fluid rounded" alt="Acabado profesional de pintura">
+        </a>
+      </div>
+
+      <div class="col-md-4 col-sm-6 gallery-item" data-aos="fade-up" data-aos-delay="300">
+        <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/Trabajo-13.jpeg">
+          <img src="assets/img/gallery/Trabajo-13.jpeg" class="img-fluid rounded" alt="Pintura interior profesional">
+        </a>
+      </div>
+
+      <div class="col-md-4 col-sm-6 gallery-item" data-aos="fade-up" data-aos-delay="400">
+        <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/Trabajo-14.jpeg">
+          <img src="assets/img/gallery/Trabajo-14.jpeg" class="img-fluid rounded" alt="Trabajo de pintura terminado">
         </a>
       </div>
     </div>
@@ -300,7 +342,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body p-0">
-        <video id="workVideo" controls preload="auto" class="w-100">
+        <video id="workVideo" controls muted preload="auto" playsinline class="w-100">
           <source src="assets/img/gallery/Video_1.mp4" type="video/mp4">
           Tu navegador no soporta videos HTML5.
         </video>
@@ -308,6 +350,21 @@
     </div>
   </div>
 </div>
+
+<script>
+  (function() {
+    var modal = document.getElementById('videoModal');
+    var video = document.getElementById('workVideo');
+    modal.addEventListener('shown.bs.modal', function() {
+      video.muted = true;
+      video.play();
+    });
+    modal.addEventListener('hidden.bs.modal', function() {
+      video.pause();
+      video.currentTime = 0;
+    });
+  })();
+</script>
 
 </section>
 
@@ -595,10 +652,20 @@
     const phoneNumber = "5491144052868";
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(whatsappText)}`;
     
+    // Tracking GTM
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'envio_formulario_whatsapp',
+      event_category: 'contacto',
+      event_label: project
+    });
+
     // Abrir WhatsApp
     window.open(whatsappUrl, '_blank');
   }
 </script>
+
+</section>
 
   </main>
 
@@ -614,13 +681,20 @@
         <div class="col-md-6 text-center text-md-end">
           <div class="social-links">
            
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/casaluchopintura" target="_blank" rel="noopener" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=5491144052868&text=Hola,%20me%20interesa%20un%20presupuesto%20para%20pintura.%20%C2%BFPodr%C3%ADas%20ayudarme?" target="_blank" rel="noopener" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
           </div>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=5491144052868&text=Hola,%20me%20interesa%20un%20presupuesto%20para%20pintura.%20%C2%BFPodr%C3%ADas%20ayudarme?"
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    <span class="whatsapp-float-label">Presupuesto</span>
+  </a>
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center">
     <i class="bi bi-arrow-up-short"></i>
@@ -634,7 +708,7 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=2"></script>
 
 </body>
 </html>
