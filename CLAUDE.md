@@ -6,7 +6,7 @@ Sitio web estático (onepage) para Casa Lucho, negocio de pintura de casas en CA
 ## Estructura
 - `website_temp/` — Carpeta de trabajo con el sitio actual (esta es la que se deploya)
 - `website/` — Vacía (no usar)
-- `terraform/` — IaC del hosting S3 anterior (legacy, ya no se usa; el bucket sigue existiendo como backup)
+- `terraform/` — IaC del hosting S3 anterior (histórico; los buckets ya no existen)
 - `docs/` — Imágenes de documentación
 
 ## Stack
@@ -23,7 +23,7 @@ git push origin master
 Cloudflare Pages buildea y publica solo (sin build command, sirve `website_temp/` tal cual). No hace falta purgar cache.
 
 ### Hosting anterior (hasta 2026-07-04)
-AWS S3 (`s3://casa-lucho.com`, profile `casa-lucho`) + bucket policy con IPs de Cloudflare. El bucket sigue vivo como backup pero **ya no recibe tráfico**; NO deployar más con `aws s3 sync`.
+AWS S3 (`s3://casa-lucho.com`) + bucket policy con IPs de Cloudflare. **Los buckets `casa-lucho.com` y `logs-casa-lucho` fueron eliminados el 2026-07-04**; el backup del sitio es este repo. NO deployar con `aws s3 sync`.
 
 ## Contacto del negocio
 - WhatsApp: 5491144052868
